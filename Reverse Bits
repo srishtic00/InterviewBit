@@ -1,0 +1,18 @@
+/**
+ * @input A : Integer
+ * 
+ * @Output Integer
+ */
+ #include <stdlib.h>
+unsigned int reverse(unsigned int A) {
+   
+    unsigned int res=0;
+    int i,d;
+    for(i=0;i<32;i++)
+    {
+        d=(A>>i)&1;
+        res=(res<<1)|d;
+    }
+    return res;
+
+}
